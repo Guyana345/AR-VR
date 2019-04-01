@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {FlatList, SafeAreaView, TouchableOpacity} from 'react-native';
+import {FlatList, SafeAreaView, TouchableOpacity, Text} from 'react-native';
 import {randomColor} from "../utils/index";
 import { StatusBar } from 'react-native';
 

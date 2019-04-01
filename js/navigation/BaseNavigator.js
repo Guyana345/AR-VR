@@ -75,7 +75,7 @@ const TabsNavigator = createBottomTabNavigator({
                     ]}
                     icon={(
                         <Icon
-                            name="vr-cardboard"
+                            name="camera"
                             color="#FFFFFF"
                             size={24}
                         />

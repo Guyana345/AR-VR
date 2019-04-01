@@ -23,6 +23,16 @@ const list = [
       },
   ]
 
+  var apiKey = "778D9516-7110-45D9-94BE-33CCCE7B7A53";
+
+  var vrScenes = {
+    'FlingVR': require('./fling_vr/MainScene'),
+  }
+  
+  var arScenes = {
+    'FlingAR': require('./fling_ar/MainScene'),
+  }
+
 class Favorite_airfeilds extends Component {
     state = {
         onShowVR: false,
@@ -39,6 +49,7 @@ class Favorite_airfeilds extends Component {
             onShowVR: false,
         }));
     }
+
 
     render() {
         return (
@@ -68,16 +79,19 @@ class Favorite_airfeilds extends Component {
                   )
               })
             }
-                
-            <Fragment>
-                { // Add a Popover to have a smooth effect yarn add react-popover or leave it.
-                    <MainScene onShow={this.state.onShowVR} onClose={this.onClose()} />
-                }
-            </Fragment>
              </ScrollView>
-             </View>
+             </View>     
         );
+        if (this.state.onShowVR) {
+            return (
+              <ViroARSceneNavigator
+                initialScene={{
+                  scene: vrScenes['FlingVR'],
+                }}
+                apiKey={apiKey} />
+              );
+      
+          }
     }
 }
 export { Favorite_airfeilds };
-
