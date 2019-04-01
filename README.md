@@ -1,6 +1,6 @@
-#AR-VR
+# AR-VR
 
-#Getting started <br>
+# Getting started <br>
 npm install <br>
 npm start <br>
 open another console and react-native run-android
